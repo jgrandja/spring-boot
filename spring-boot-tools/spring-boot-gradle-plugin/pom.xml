@@ -66,7 +66,7 @@
 								<argument>-Pdescription=${project.description}</argument>
 							</arguments>
 							<environmentVariables>
-								<JDK_JAVA_OPTIONS>--add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED</JDK_JAVA_OPTIONS>
+								<JDK_JAVA_OPTIONS>${jdkJavaOptions}</JDK_JAVA_OPTIONS>
 							</environmentVariables>
 						</configuration>
 						<goals>
@@ -270,6 +270,24 @@
 					</plugin>
 				</plugins>
 			</build>
+		</profile>
+		<profile>
+			<id>java-8</id>
+			<activation>
+				<jdk>[1.8,1.9)</jdk>
+			</activation>
+			<properties>
+				<jdkJavaOptions></jdkJavaOptions>
+			</properties>
+		</profile>
+		<profile>
+			<id>java-9</id>
+			<activation>
+				<jdk>[1.9,)</jdk>
+			</activation>
+			<properties>
+				<jdkJavaOptions>--add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED</jdkJavaOptions>
+			</properties>
 		</profile>
 	</profiles>
 </project>
