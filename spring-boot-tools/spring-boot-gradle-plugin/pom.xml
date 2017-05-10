@@ -64,6 +64,7 @@
 								<argument>${gradle.task}</argument>
 								<argument>-Pversion=${project.version}</argument>
 								<argument>-Pdescription=${project.description}</argument>
+								<argument>--stacktrace</argument>
 							</arguments>
 							<environmentVariables>
 								<JDK_JAVA_OPTIONS>${jdkJavaOptions}</JDK_JAVA_OPTIONS>
