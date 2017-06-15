@@ -16,6 +16,7 @@
 
 package org.springframework.boot.test.mock.mockito;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
@@ -35,6 +36,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 @RunWith(ModifiedClassPathRunner.class)
 @ClassPathOverrides("org.mockito:mockito-core:1.10.19")
+@Ignore("Mockito 2.5+ is required with Java 9")
 public class Mockito110Tests {
 
 	@Test
