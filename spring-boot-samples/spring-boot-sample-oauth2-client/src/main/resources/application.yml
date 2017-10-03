@@ -1,0 +1,39 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registrations:
+          github-client-1:
+            template-id: github
+            client-id: 1b4c6c2d23a2dbec8959
+            client-secret: 8bdb4047d98f37e1c6aeba9ffd2017bc31682e1b
+            client-name: Github user
+            scope: user
+            redirect_uri: http://localhost:8080/oauth2/authorize/code/github
+          github-client-2:
+            template-id: github
+            client-id: 1b4c6c2d23a2dbec8959
+            client-secret: 8bdb4047d98f37e1c6aeba9ffd2017bc31682e1b
+            client-name: Github email
+            scope: user:email
+            redirect_uri: http://localhost:8080/oauth2/authorize/code/github
+
+#spring:
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          github-client-1:
+#            provider: github
+#            client-id: 1b4c6c2d23a2dbec8959
+#            client-secret: 8bdb4047d98f37e1c6aeba9ffd2017bc31682e1b
+#            client-name: Github user
+#            scope: user
+#            redirect_uri: http://localhost:8080/oauth2/authorize/code/github
+#          github-client-2:
+#            provider: github
+#            client-id: 1b4c6c2d23a2dbec8959
+#            client-secret: 8bdb4047d98f37e1c6aeba9ffd2017bc31682e1b
+#            client-name: Github email
+#            scope: user:email
+#            redirect_uri: http://localhost:8080/oauth2/authorize/code/github
